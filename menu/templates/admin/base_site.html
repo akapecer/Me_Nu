@@ -1,0 +1,29 @@
+{% extends "admin/base_site.html" %}
+
+{% load static %}
+
+{% block title %}Admin Personalizzato - Me_nu{% endblock %}
+
+{% block extrahead %}
+    <link rel="stylesheet" type="text/css" href="{% static 'menu/css/admin.css' %}">
+{% endblock %}
+
+{% block branding %}
+    <h1><a href="{% url 'admin:index' %}" style="text-decoration: none; color: #007bff;">Me_nu Admin</a></h1>
+{% endblock %}
+
+{% block nav-global %}
+    <div class="navbar-custom">
+        <ul>
+            <li><a href="{% url 'admin:index' %}">Dashboard</a></li>
+            <li><a href="{% url 'admin:menu_category_changelist' %}">Categorie</a></li>
+            <li><a href="{% url 'admin:menu_product_changelist' %}">Prodotti</a></li>
+        </ul>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="custom-admin-container">
+        {{ block.super }}
+    </div>
+{% endblock %}
