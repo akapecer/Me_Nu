@@ -4,10 +4,9 @@ Me_nu è un'applicazione web per un menu digitale che consente di visualizzare u
 
 ## Tecnologie Utilizzate
 
-- **Frontend**: React, React Bootstrap, Framer Motion, CSS
+- **Frontend**: React, React Bootstrap, CSS
 - **Backend**: Django, Django REST Framework
 - **Database**: SQLite (per sviluppo), può essere configurato per altri database in produzione
-- **Deployment**: (specificare il servizio di hosting se applicabile, ad esempio Heroku, AWS, ecc.)
 
 ## Funzionalità
 
@@ -37,5 +36,5 @@ Assicurati di avere i seguenti software installati:
 ### 1. Clona il repository
 
 ```bash
-git clone https://github.com/tuo-username/me_nu.git
+git clone https://github.com/akapecer/me_nu.git
 cd me_nu
