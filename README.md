@@ -14,8 +14,6 @@ Me_nu è un'applicazione web per un menu digitale che consente di visualizzare u
 
 - Visualizzazione dinamica delle categorie e dei prodotti tramite un menu interattivo.
 - Ogni prodotto include un nome, descrizione, prezzo e un pulsante per ordinare.
-- Animazioni per migliorare l'esperienza utente durante la visualizzazione dei prodotti.
-- Possibilità di visualizzare e filtrare i prodotti per categoria.
   
 ### Backend (Amministrazione)
 
