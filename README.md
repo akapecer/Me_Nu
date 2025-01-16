@@ -1,6 +1,6 @@
 # Me_nu - Digital Menu Web App
 
-Me_nu è un'applicazione web per un menu digitale che consente di visualizzare un menu interattivo per un ristorante o un locale. La web app include un frontend costruito con React e un backend Django per la gestione delle categorie, dei prodotti e delle prenotazioni.
+Me_nu è un'applicazione web per un menu digitale che consente di visualizzare un menu interattivo per un ristorante o un locale. La web app include un frontend costruito con React e un backend Django per la gestione delle categorie, dei prodotti e dei prezzi.
 
 ## Tecnologie Utilizzate
 
