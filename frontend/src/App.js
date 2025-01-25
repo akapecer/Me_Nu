@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import 'bootstrap/dist/css/bootstrap.min.css'; // Assicurati di aver importato Bootstrap
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
+import logo from './logo.png';
 
 function App() {
     const [categories, setCategories] = useState([]);
@@ -15,32 +17,67 @@ function App() {
     }, []);
 
     return (
-        <div className="App">
-            <h1>Me_Nu</h1>
+        <div className="App container py-4">
+             {/* Sostituisci il titolo con il logo */}
+             <div className="text-center mb-4">
+                <img src={logo} alt="Me_Nu Logo" className="logo" />
+            </div>
             {categories.length === 0 ? (
-                <p>Caricamento in corso...</p>
+                <p className="text-center">Caricamento in corso...</p>
             ) : (
-                categories.map((category) => (
-                    <div className="category-container" key={category.id}>
-                        <h2>{category.name}</h2>
-                        <div className="row">
-                            {category.products.map((product) => (
-                                <div className="col-12 col-md-4" key={product.id}>
-                                    <div className="card mb-4">
-                                        <div className="card-body">
-                                            <h5 className="card-title">{product.name}</h5>
-                                            {product.description && <p className="card-text">{product.description}</p>}
-                                            <p className="card-text text-danger">€{product.price}</p>
-                                        </div>
+                <div id="categoriesCarousel" className="carousel slide">
+                    <div className="carousel-inner">
+                        {categories.map((category, index) => (
+                            <div 
+                                className={`carousel-item ${index === 0 ? 'active' : ''}`} 
+                                key={category.id}
+                            >
+                                <div className="card h-100 mx-auto costum-card" style={{ width: '25rem',  }}>
+                                    <div className="card-header">
+                                        <h5 className="mb-0">{category.name}</h5>
                                     </div>
+                                    <ul className="list-group list-group-flush">
+                                        {category.products.map((product) => (
+                                            <li className="list-group-item" key={product.id}>
+                                                <div className="d-flex justify-content-between">
+                                                    <span>{product.name}</span>
+                                                    <span className="text-danger">€{product.price}</span>
+                                                </div>
+                                                {product.description && (
+                                                    <small className="text-muted">{product.description}</small>
+                                                )}
+                                            </li>
+                                        ))}
+                                    </ul>
                                 </div>
-                            ))}
-                        </div>
+                            </div>
+                        ))}
                     </div>
-                ))
+
+                    {/* Controlli per il carosello */}
+                    <button
+                        className="carousel-control-prev"
+                        type="button"
+                        data-bs-target="#categoriesCarousel"
+                        data-bs-slide="prev"
+                    >
+                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                        
+                    </button>
+                    <button
+                        className="carousel-control-next"
+                        type="button"
+                        data-bs-target="#categoriesCarousel"
+                        data-bs-slide="next"
+                    >
+                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                        
+                    </button>
+                </div>
             )}
         </div>
     );
 }
 
 export default App;
+
