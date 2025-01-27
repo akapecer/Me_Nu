@@ -52,7 +52,8 @@ body {
   background: transparent !important; /* Sfondo trasparente */
   font-weight: bold !important;
   border: none !important; /* Rimuove bordi */
-  color: #000000 !important; /* Colore testo */
+  color: #141414 !important; /* Colore testo */
+  font-size: large;
   padding: 0.8rem 1rem !important;
 }
 
@@ -64,6 +65,32 @@ body {
 
 .list-group-item:last-child {
   border-bottom: none !important;
+}
+
+.btn-category {
+  background-color:  rgba(255, 255, 138, 0) !important;
+  font-weight: bold !important;
+  color: rgb(0, 0, 0) !important; /* Testo bianco */
+  border: 1px solid  rgba(255, 255, 138, 0);
+}
+
+.btn-all {
+  background-color:  rgba(255, 255, 138, 0) !important;
+  font-weight: bold !important;
+  color: rgb(0, 0, 0) !important; /* Testo bianco */
+  border: 1px solid  rgba(255, 255, 138, 0);
+}
+
+.btn-all:hover {
+  background-color: #000000 !important; /* Verde più scuro al passaggio del mouse */
+  color: rgb(255, 255, 255) !important; /* Testo bianco */
+  border-color: rgba(255, 255, 138, 0) !important; /* Cambia il bordo */
+}
+
+.btn-category:hover {
+  background-color: #000000 !important; /* Verde più scuro al passaggio del mouse */
+  color: rgb(255, 255, 255) !important; /* Testo bianco */
+  border-color: rgba(255, 255, 138, 0) !important; /* Cambia il bordo */
 }
 
 

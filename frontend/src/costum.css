@@ -1,0 +1,10 @@
+/* src/custom.css */
+.frosted-glass {
+    background: rgba(255, 255, 255, 0.3); /* White background with transparency */
+    border-radius: 15px; /* Rounded corners */
+    padding: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    backdrop-filter: blur(10px); /* Blur effect */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    color: #333; /* Text color */
+}
